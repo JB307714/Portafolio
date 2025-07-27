@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Desarrollador Full Stack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Mi Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Desarrollador Full Stack</h1>
+            <p>Estudiante de ORT Uruguay | Apasionado por crear soluciones innovadoras</p>
+            <a href="#proyectos" class="cta-button">Ver mis proyectos</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-image">👨‍💻</div>
+                <div class="about-text">
+                    <p>Soy un desarrollador Full Stack en formación, actualmente estudiando en ORT Uruguay. Mi pasión por la tecnología me impulsa a crear soluciones innovadoras y eficientes.</p>
+                    <p>Con experiencia en desarrollo web moderno, bases de datos y servicios en la nube, me especializo en crear aplicaciones escalables y de alto rendimiento.</p>
+                    <p>Siempre estoy buscando nuevos desafíos y oportunidades para aplicar mis conocimientos en proyectos reales que generen impacto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Mis Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🌐 Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>⚙️ Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">.NET</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🗄️ Bases de Datos</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>☁️ Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>📋 Metodologías</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scrum</span>
+                        <span class="skill-tag">Agile</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🚀</div>
+                    <div class="project-content">
+                        <h3>Aplicación Web Full Stack</h3>
+                        <p>Sistema completo desarrollado con React y .NET, implementando autenticación de usuarios y API REST.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <h3>Dashboard de Analytics</h3>
+                        <p>Dashboard interactivo para visualización de datos con gráficos dinámicos y reportes en tiempo real.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🌩️</div>
+                    <div class="project-content">
+                        <h3>API en la Nube</h3>
+                        <p>API RESTful deployada en AWS con arquitectura serverless y integración con bases de datos en la nube.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">.NET</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Email</a>
+            </div>
+            <p>&copy; 2025 Mi Portfolio. Desarrollado con ❤️ en Uruguay.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

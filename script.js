@@ -38,25 +38,32 @@ document.querySelectorAll('.skill-category, .project-card').forEach(el => {
 // Manejo del formulario de contacto
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // Simulación de envío
+
     const submitBtn = this.querySelector('.submit-btn');
     const originalText = submitBtn.textContent;
-    
+
     submitBtn.textContent = 'Enviando...';
     submitBtn.disabled = true;
-    
-    setTimeout(() => {
-        submitBtn.textContent = '¡Mensaje enviado!';
-        submitBtn.style.background = '#4CAF50';
-        
-        setTimeout(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            submitBtn.style.background = '';
-            this.reset();
-        }, 2000);
-    }, 1500);
+
+    emailjs.sendForm('service_hf3lkne', 'template_p2v71rn', this)
+        .then(() => {
+            submitBtn.textContent = '¡Mensaje enviado!';
+            submitBtn.style.background = '#4CAF50';
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+                this.reset();
+            }, 2000);
+        }, (error) => {
+            submitBtn.textContent = 'Error al enviar';
+            submitBtn.style.background = '#e74c3c';
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+            }, 2000);
+        });
 });
 
 // Efecto parallax sutil en el hero
@@ -72,11 +79,13 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
+        header.style.background = 'linear-gradient(135deg, rgba(17, 24, 39, 0.99), rgba(31, 41, 55, 0.98))';
+        header.style.boxShadow = '0 6px 40px rgba(0, 0, 0, 0.5)';
+        header.style.borderBottom = '1px solid rgba(107, 114, 128, 0.5)';
     } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        header.style.background = 'linear-gradient(135deg, rgba(17, 24, 39, 0.98), rgba(31, 41, 55, 0.95))';
+        header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.4)';
+        header.style.borderBottom = '1px solid rgba(75, 85, 99, 0.4)';
     }
 });
 

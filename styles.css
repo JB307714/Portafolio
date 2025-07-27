@@ -20,7 +20,7 @@ body {
 
 /* Header */
 header {
-    background: rgba(17, 24, 39, 0.95);
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.98), rgba(31, 41, 55, 0.95));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 1rem 0;
@@ -28,8 +28,8 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(55, 65, 81, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(75, 85, 99, 0.4);
 }
 
 nav {
